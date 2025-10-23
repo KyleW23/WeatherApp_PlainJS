@@ -1,0 +1,67 @@
+:root {
+    --primary-color: #ffa500;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#searchWrapper {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+#inputContainer {
+    position: relative;
+    display: inline-block;
+}
+
+#inputCity {
+    width: 15rem;
+    height: 2.5rem;
+    padding: 0 6.5rem 0 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+#searchButton {
+    width: 5rem;
+    height: 2rem;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+}
+
+#weatherContainer {
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#weatherContainer #currentWeather {
+    width: 25rem;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid gray;
+}
+
+#currentWeather .currentCondition {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.currentCondition #currentTemp {
+    font-size: xx-large;
+    font-weight: bold;
+}

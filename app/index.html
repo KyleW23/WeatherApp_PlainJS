@@ -7,17 +7,35 @@
         <title>Plain Weather App</title>
     </head>
     <body>
-        <div id="inputContainer">
-            <form action="" id="cityForm">
-                <input type="text" name="city" id="inputCity" />
-            </form>
+        <div id="searchWrapper">
+            <div id="inputContainer">
+                <form action="" id="cityForm">
+                    <input
+                        type="text"
+                        name="city"
+                        id="inputCity"
+                        placeholder="Enter a City"
+                    />
+                    <button type="submit" id="searchButton">Search</button>
+                </form>
+            </div>
         </div>
         <div id="weatherContainer">
             <div id="currentWeather">
                 <h1 id="cityState"></h1>
-                <p id="currentTemp"></p>
-                <p id="currentCondition"></p>
+                <div class="currentCondition">
+                    <img id="conditionIcon" />
+                    <p id="currentTemp"></p>
+                </div>
+                <div class="extraInfo">
+                    <p id="minMax"></p>
+                    <p id="feelsLike"></p>
+                    <p id="wind"></p>
+                    <p id="humidity"></p>
+                </div>
             </div>
+            <div id="hourlyWeather"></div>
+            <div id="dailyWeather"></div>
         </div>
         <script src="config/config.js"></script>
         <script src="script.js"></script>
