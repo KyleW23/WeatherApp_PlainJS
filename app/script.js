@@ -102,6 +102,12 @@ const displayCurrentWeather = async (coords) => {
     const lon = coords.lon;
     const city = coords.name;
     const state = coords.state;
+    const date = new Date();
+    const today = date.toLocaleDateString('en-US', {
+        weekday: 'long',
+        month: 'long',
+        day: 'numeric',
+    });
 
     const weather = await getCurrentWeather(lat, lon);
     const condition = `https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`;
@@ -114,6 +120,9 @@ const displayCurrentWeather = async (coords) => {
 
     const locationDisplay = document.getElementById('cityState');
     locationDisplay.textContent = `${city}, ${state}`;
+
+    const dateDisplay = document.getElementById('currentDate');
+    dateDisplay.textContent = today;
 
     const conditionDisplay = document.getElementById('conditionIcon');
     conditionDisplay.setAttribute('src', condition);

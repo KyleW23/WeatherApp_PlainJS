@@ -5,6 +5,7 @@
 body {
     margin: 0;
     padding: 0;
+    width: 100%;
     height: 100%;
 }
 
@@ -41,18 +42,20 @@ body {
 
 #weatherContainer {
     margin-top: 5rem;
-    display: flex;
-    flex-direction: row;
+    display: grid;
     justify-content: center;
 }
 
+#weatherContainer .locationContainer {
+}
+
 #weatherContainer #currentWeather {
-    width: 25rem;
+    width: 100%;
     padding: 1rem 1rem;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    border: 1px solid gray;
+    gap: 10rem;
 }
 
 #currentWeather .currentCondition {
